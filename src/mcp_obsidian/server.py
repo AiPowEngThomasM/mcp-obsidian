@@ -23,10 +23,6 @@ from . import tools
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("mcp-obsidian")
 
-api_key = os.getenv("OBSIDIAN_API_KEY")
-if not api_key:
-    raise ValueError(f"OBSIDIAN_API_KEY environment variable required. Working directory: {os.getcwd()}")
-
 app = Server("mcp-obsidian")
 
 tool_handlers = {}
